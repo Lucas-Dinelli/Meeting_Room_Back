@@ -38,8 +38,8 @@ public class RoomService {
 	}
 	
 	public List<RoomDTO> findAll(){
-		List<Room> people = roomRepository.findAll();
-		return people.stream().map(person -> modelMapper.map(person, RoomDTO.class)).collect(Collectors.toList());
+		List<Room> rooms = roomRepository.findAll();
+		return rooms.stream().map(room -> modelMapper.map(room, RoomDTO.class)).collect(Collectors.toList());
 	}
 	
 	public RoomDTO update(Long id, RoomDTO roomDTOUpdated) {
